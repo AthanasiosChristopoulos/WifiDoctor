@@ -1,0 +1,107 @@
+Wireshark Querries / Filters:
+
+https://gaia.cs.umass.edu/wireshark-labs/802.11-9.2.4.1_spec+wireshark_filters.pdf
+
+    1) tcp contains youtube
+    2) ip.addr == 147.0.0.0/8
+    3) eth.addr ==
+    4) tcp.port == 
+    4.1) tcp.flags.syn == 1 (only SYN packets)
+    5) wlan.fc.type_subtype == 8 (show only beacon frames)
+    5.1) wlan.fc.type_subtype == 5 (show only Probe Responses, are answers from AP, sent when a client requests network details)
+    6) wlan.fc.type_subtype == 0 (Association Requests)
+    7) wlan.fc.type_subtype == 1 (Association Responses)
+    8) wlan.fc.type_subtype == 11 (Authentications) 
+    9) wlan.fc.retry == 1
+    10.1) wlan.fc.type == 0 => management packets
+    10.2) wlan.fc.type == 2 => data packets
+    11) Filter by MAC address:
+    11.1)  wlan.ta == 2C:F8:9B:DD:06:A0 (transmitter address)
+    11.2)  wlan.da == 00:20:A6:FC:B0:36 (destination address)
+    12) frame.number == 11867
+
+Source Address (SA - wlan.sa) => might be the AP or the device
+
+    The original sender of the packet (e.g., a device sending data to the AP).
+    wlan.sa = 9c:3d:cf:75:81:a1 (Laptop → original sender)
+
+Destination Address (DA - wlan.da)
+
+    The final destination of the packet (e.g., the device intended to receive the data).
+
+Transmitter Address (TA - wlan.ta) => is always the AP
+
+    The device that physically transmitted the frame over the air.
+    wlan.ta = 2c:f8:9b:dd:06:a0 (AP → transmitting over the air / faciliting the transmission as an intermidiary between two LAN devices
+    The AP as a Wireless Relay => Transmitter == Source
+    The AP as a Gateway => Transmitter != Source
+
+Receiver Address (RA - wlan.ra)
+
+    The device that physically received the frame over the air.
+
+πλαίσια ραδιοφάρου = beacon frames
+
+
+How to Determine the Authentication Type?
+
+    The Authentication frame in IEEE 802.11 contains a field called the Authentication Algorithm Number:
+        0 = Open System Authentication (OSA)
+        1 = Shared Key Authentication (SKA)
+        2 = Fast BSS Transition (FT)
+        3 = Simultaneous Authentication of Equals (SAE) (used in WPA3)
+
+
+Enviroments:
+
+    python3 -m venv myenv
+    source myenv/bin/activate
+    deactivate
+    pip list | grep pyshark
+
+pcap Packet Reading:
+    
+    Layers:
+        
+        frame_info.field_names => frame layer 
+        wlan_layer = pkt.wlan => IEEE 802.11 Beacon frame, Flags: ........C
+        radio_layer = pkt.radiotap => Radiotap Header v0, Length 32
+        wlan_radio = pkt.wlan_radio => 802.11 radio information
+        mgt = pkt['wlan.mgt'] => IEEE 802.11 Wireless Management
+
+    Fields: find them by: mgt.field_names
+    
+    Frame stuff:
+
+        pkt.number
+        pkt.sniff_time, pkt.sniff_time.timestamp()
+        pkt.frame_info.time_delta
+        pkt.length
+    
+    layers
+        fields
+
+
+Beacon Frames: (0x0008)
+
+    BSSID
+    Transmitter MAC address
+    Receiver MAC address
+    Type/subtype
+    PHY Type
+    Data rate
+    Channel
+    Frequency
+    Signal strength
+    Signal/noise ratio
+    TSF Timestamp
+
+QoS Data: (0x0028)
+
+    MCS Index
+    Bandwidth
+    Spatial Streams
+    Short GI
+
+
+    

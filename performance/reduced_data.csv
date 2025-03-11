@@ -1,0 +1,2 @@
+BSSID,PHY Type,Channel,Frequency,Average Signal Strength,Channel Switch Count,Retry Rate,Data Rate,Short GI,MCS index
+2c:f8:9b:dd:06:a0,802.11n (HT),1,2412,-33.03,0,0.005025125628140704,139.63413999999975,1,15
