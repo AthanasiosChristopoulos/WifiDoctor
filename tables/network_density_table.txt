@@ -1,0 +1,11 @@
++-----------------------+-------+
+|        Metric         | Value |
++-----------------------+-------+
+|  Weighted SSID Score  | 55.61 |
+| Channel Overlap Score | 32.00 |
+| Channel Switch Impact | 0.00  |
+|   PHY Penalty Score   | 12.70 |
+|  Unique SSIDs Score   |  25   |
+| Final Network Density | 62.65 |
++-----------------------+-------+
+

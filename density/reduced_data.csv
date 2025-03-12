@@ -1,7 +1,0 @@
-BSSID,PHY Type,Channel,Frequency,Average Signal Strength,Channel Switch Count
-ec:f0:fe:e9:69:24,802.11n (HT),1,2412,-73.5,0
-1e:6c:64:6b:55:b8,802.11n (HT),1,2412,-37.666666666666664,0
-cc:8c:bf:3e:d3:04,802.11n (HT),6,2437,-70.0,0
-04:71:53:8c:df:36,802.11n (HT),8,2447,-61.0,0
-04:71:53:8c:df:3b,802.11ac (VHT),36,5180,-85.0,0
-cc:29:bd:c7:ff:e0,802.11n (HT),3,2422,-84.0,0

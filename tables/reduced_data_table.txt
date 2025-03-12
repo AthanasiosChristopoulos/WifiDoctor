@@ -1,0 +1,22 @@
++-------------------------+-------------------+
+|         Metric          |       Value       |
++-------------------------+-------------------+
+|          BSSID          | 1e:6c:64:6b:55:b8 |
+|        PHY Type         |   802.11n (HT)    |
+|         Channel         |        11         |
+|        Frequency        |       2462        |
+| Average Signal Strength |      -45.08       |
+|  Channel Switch Count   |         0         |
+|       Retry Rate        |      0.08000      |
+|        Data Rate        |       72.22       |
+|       Throughput        |       69.17       |
+|        Short GI         |      100.00       |
+|        MCS index        |       7.00        |
+|         MIN_Tht         |       66.33       |
+|       Median_Tht        |       68.66       |
+|         75P_Tht         |       72.22       |
+|         95P_Tht         |       72.22       |
+|         MAX_Tht         |       72.22       |
+|        Bandwidth        |        20         |
++-------------------------+-------------------+
+

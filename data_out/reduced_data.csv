@@ -1,0 +1,2 @@
+BSSID,PHY Type,Channel,Frequency,Average Signal Strength,Channel Switch Count,Retry Rate,Data Rate,Throughput,Short GI,MCS index,MIN_Tht,Median_Tht,75P_Tht,95P_Tht,MAX_Tht,Bandwidth,Rate Gap
+1e:6c:64:6b:55:b8,802.11n (HT),11,2462,-45.08,0,0.08000,72.22,69.17,100.00,7.00,66.33,68.66,72.22,72.22,72.22,20,0.0
