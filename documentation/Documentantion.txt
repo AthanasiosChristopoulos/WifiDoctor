@@ -1,0 +1,49 @@
+Make Virtual Enviroment: 
+which python
+pip list | grep pyshark
+
+python3 -m venv .venv
+source .venv/bin/activate
+deactivate
+
+Use system wide packages:
+python3 -m venv .venv --system-site-packages
+source .venv/bin/activate
+sudo pip install pyshark --break-system-packages
+
+
+
+
+Git:
+	git clone https://github.com/AthanasiosChristopoulos/WifiDoctor.git 
+	(Used to create a copy of a remote repository and establish an initial connection with it.)
+
+	Creating Repository:
+	git init
+	git remote add origin https://github.com/AthanasiosChristopoulos/WifiDoctor.git
+
+	Using git:
+	
+	git add .
+	git add Documentantion.txt
+	
+	git commit -m "Your commit message" (--amend)
+	git commit --amend --no-edit  # Amend (edit last commit, dont create new one) the commit without changing the commit message
+	
+	Manage commits:
+	git log (View Commits)
+	git reset --soft HEAD~1   # Removes commit but keeps changes
+	git reset --hard HEAD~1   # Removes commit AND changes
+	git rebase -i HEAD~5  # Allows you to modify last 5 commits
+
+
+	git push -u origin main
+
+    git add Documentantion.txt
+    
+
+	git pull origin main --rebase (Update your local code with newest version)
+
+	git rebase (Delete commit history)
+	
+		# You may want to go back 3 commits (adjust the number as needed)

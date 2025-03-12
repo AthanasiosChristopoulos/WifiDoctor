@@ -1,0 +1,2 @@
+BSSID,PHY Type,Channel,Frequency,Average Signal Strength,Channel Switch Count,Retry Rate,Data Rate,Throughput,Short GI,MCS index,MIN_Tht,Median_Tht,75P_Tht,95P_Tht,MAX_Tht
+f4:2e:7f:2e:5f:71,802.11a (OFDM),149,5745,-73.90,0,0.00000,6.00,6.00,0.00,7.00,6.00,6.00,6.00,6.00,6.00
